@@ -1,0 +1,52 @@
+#include <iostream>
+#include <iomanip>
+#include <string>
+using namespace std;
+
+
+
+//class X
+//{
+//public:
+//    X(){}
+//    X(int a) :x(a)
+//    {}
+//    int x;
+//};
+//class Y :virtual public X
+//{
+//public:
+//    Y() {}
+//    Y(int a) :X(a)
+//    {}
+//};
+class Z 
+{
+public:
+    Z(){}
+    int x;
+
+}; class X : virtual public Z {};
+class Y : virtual public Z {};
+
+
+
+
+class D : public X, public Y
+{
+public:
+    D() :Z() { }
+   
+};
+int main()
+{
+    D d1;
+    cin >> d1.x >> d1.X::x >> d1.Y::x >> d1.Z::x;
+
+    cout << d1.x << endl;
+    cout << d1.X::x << endl;
+    cout << d1.Y::x << endl;
+    cout << d1.Z::x << endl;
+
+    return 0;
+}
